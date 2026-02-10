@@ -2,25 +2,25 @@
 
 import mongoose from "mongoose";
 
-const dbConnection = async() => {
+export const dbConnection = async() => {
     try {
-        mongoose.Connection.on('error', ()=> {
+        mongoose.connection.on('error', ()=> {
             console.log('MongoDB no se pudo conectar a mongoDB');
             mongoose.disconnect();
         })
-        mongoose.Connection.on('connecting', ()=> {
+        mongoose.connection.on('connecting', ()=> {
             console.log('MongoDB Intentando conectar a mongoDB');
         })
-        mongoose.Connection.on('connected', ()=> {
+        mongoose.connection.on('connected', ()=> {
             console.log('MongoDB conectado a mongoDB');
         })
-        mongoose.Connection.on('open', ()=> {
+        mongoose.connection.on('open', ()=> {
             console.log('MongoDB conectado a la base de datos kinalSports');
         })
-        mongoose.Connection.on('reconnected', ()=> {
+        mongoose.connection.on('reconnected', ()=> {
             console.log('MongoDB reconectando a mongoDB');
         })
-        mongoose.Connection.on('disconnected', ()=> {
+        mongoose.connection.on('disconnected', ()=> {
             console.log('MongoDB desconectando a mongoDB');
         })
         
