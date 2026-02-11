@@ -1,5 +1,5 @@
 'use strict';
-
+// Se exportan clases
 import express from 'express';
 import cors from 'cors';
 import helmet  from 'helmet';
