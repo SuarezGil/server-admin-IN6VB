@@ -49,7 +49,7 @@ const fieldSchema = mongoose.Schema(
 },
 {
     timestamps: true,
-    verionKey: false
+    versionKey: false
 }
 )
 fieldSchema.index({isActive: 1});
